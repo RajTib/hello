@@ -23,6 +23,7 @@ export default function Home({ screen, forgiven, animKey, onNext, onForgive, onR
       >
         <ScreenCard
           data={currentScreen}
+          screenIndex={screen}
           forgiven={forgiven}
           isLast={isLast}
           onNext={onNext}
@@ -31,8 +32,6 @@ export default function Home({ screen, forgiven, animKey, onNext, onForgive, onR
         />
 
         <ProgressDots current={screen} total={screens.length} />
-
-        <p className="text-[11px] text-pink-300 mt-1">made with 💕 just for you</p>
       </div>
     </div>
   )
